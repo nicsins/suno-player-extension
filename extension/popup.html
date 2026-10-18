@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Suno Player</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0a0a0a; color: #e8e8e8;
+      width: 320px; padding: 14px;
+    }
+    h1 { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #888; }
+    .track { margin: 10px 0 6px; }
+    .title { font-size: 15px; font-weight: 600; }
+    .meta { font-size: 11px; color: #777; margin-top: 2px; }
+    .controls { display: flex; gap: 10px; align-items: center; margin: 10px 0; }
+    button {
+      background: #1a1a1a; border: 1px solid #333; color: #eee;
+      border-radius: 6px; padding: 6px 12px; cursor: pointer; font-size: 13px;
+    }
+    button:hover { background: #262626; }
+    button.play { background: #4ade80; color: #111; border-color: #4ade80; font-weight: 700; }
+    .queue { max-height: 180px; overflow-y: auto; margin-top: 8px; }
+    .queue-item {
+      padding: 6px 4px; border-bottom: 1px solid #1f1f1f; font-size: 12px; cursor: pointer;
+    }
+    .queue-item:hover { background: #161616; }
+    .queue-item.active { color: #4ade80; }
+    .status { font-size: 11px; color: #555; margin-top: 6px; }
+    audio { width: 100%; margin-top: 8px; }
+  </style>
+</head>
+<body>
+  <h1>Suno Player</h1>
+  <div class="track">
+    <div class="title" id="title">Loading…</div>
+    <div class="meta" id="meta"></div>
+  </div>
+  <div class="controls">
+    <button id="prev">Prev</button>
+    <button class="play" id="play">Play</button>
+    <button id="next">Next</button>
+  </div>
+  <audio id="audio" controls preload="none"></audio>
+  <div class="queue" id="queue"></div>
+  <div class="status" id="status"></div>
+  <script src="popup.js"></script>
+</body>
+</html>

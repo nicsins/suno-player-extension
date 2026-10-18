@@ -1,0 +1,13 @@
+{
+  "name": "suno-player-proxy",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Node 18+ proxy for Suno audio streaming (no external deps).",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
